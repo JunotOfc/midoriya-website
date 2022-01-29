@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://cdn.discordapp.com/avatars/856956180558774283/3285c097a99a45e0e09c420108585cc7.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://kit.fontawesome.com/77f57eccc7.js" crossorigin="anonymous"></script>
+
+    <title>Midoriya's Commands</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <!-------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="https://cdn.discordapp.com/avatars/856956180558774283/3285c097a99a45e0e09c420108585cc7.png"
+            alt="Midoriya's Avatar">
+        <a class="navbar-brand" href="/">Midoriya</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-midoriya">About Deku</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://dsc.gg/midoriya">Support Server</a>
+                </li>
+                <li class="nav-item inviteTheBot">
+                    <a class="nav-link"
+                        href="https://discord.com/api/oauth2/authorize?client_id=856956180558774283&permissions=8&scope=bot%20applications.commands">Invite
+                        Bot</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-------------------------------->
+    <!--Main Title With Information-->
+    <!-------------------------------->
+    <div class="info">
+        <div class="column emoji">
+            <img src="https://media.discordapp.net/attachments/928050219176853631/928631916008189972/midoriya_bejo.png"
+                alt="Midoriya's Emoji Happy">
+        </div>
+        <div class="column text">
+            <p class="title">Midoriya's Commands</p>
+            <p class="page-description">Welcome to the Midoriya's Commands page! Here you can see all Midoriya's commands (not slash commands),
+                with their usage, description, or aliases!<br><br>Note that, Midoriya's prefix by defalut is"m.", but in
+                the future you can change it. Try mention the Bot form more information about this!<br><br>NOTE: This
+                commands, aren't slash commands! They are pre-built commands so that when the slash commands arrive,
+                they only serve to show the information, for now they still work normally!</p>
+        </div>
+    </div>
+    <!-------------------------------->
+    <!--Command List-->
+    <!-------------------------------->
+    <section class="main-content">
+        <p>Commands List</p>
+        <% commands.forEach(({ name, value }) => { %>
+        <table style="width: 90%;">
+            <h1 style="text-align: center;">
+                <%= name%>
+            </h1>
+            <tr>
+                <th class="info1"> <i class="fas fa-signature"></i> Command Name</th>
+                <th class="info1"> <i class="fas fa-align-left"></i> Description</th>
+                <th class="info1"> <i class="fas fa-sign-language"></i> Usage</th>
+                <th class="info1"> <i class="fas fa-globe"></i> Aliases</th>
+            </tr>
+            <% value.forEach(({ name, description, aliases, usage }) => { %>
+            <tr>
+                <td><%= name%></td>
+                <td><%= description%></td>
+                <td><%= usage%></td>
+                <td><%= typeof aliases === 'string' ? aliases : aliases.join(', ')%></td>
+            </tr>
+            <% }) %>
+        </table>
+        <% }) %>
+    </section>
+    <!-------------------------------->
+    <!--Footer-->
+    <!-------------------------------->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6></h6>
+                    <p class="text-justify">Midoroyia is one of the most famous Junot's projects in Discord!<br>©
+                        Midoriya && Junot.js Inc. 2020 - 2022 — All rights reserved</p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Midoriya</h6>
+                    <ul class="footer-links">
+                        <li><a href="/">Home Page</a></li>
+                        <li><a href="https://dsc.gg/midoriya">Support Server</a></li>
+                        <li><a href="#">Commands List</a></li>
+                        <li><a href="about-midoriya">About Midoriya</a></li>
+                        <li><a href="https://discord.com">Discord - A fun place :D</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Resources Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="guidelines">Community Guidelines</a></li>
+                        <li><a href="privacy">Privacy Policy and Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">© Midoriya && Junot.js Inc. 2020 - 2022 — All rights reserved
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://dsc.gg/midoriya"><i class="fab fa-discord"></i></a></li>
+                        <li><a class="twitter" href="https://twitter.com/ofc_junot"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a class="dribbble" href="https://www.instagram.com/x.junot_ofc.x/"><i
+                                    class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-------------------------------->
+    <!--Scripts and References-->
+    <!-------------------------------->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+    @import url('http://fonts.cdnfonts.com/css/commando');
+
+    /*--------------------------------*/
+    /*All the Page*/
+    /*--------------------------------*/
+    * {
+        box-sizing: border-box;
+    }
+
+    /*--------------------------------*/
+    /*Navbar*/
+    /*--------------------------------*/
+    body nav {
+        -webkit-box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.69);
+        box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.69);
+    }
+
+    body nav img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+    body nav .navbar-brand {
+        font-family: 'Commando', sans-serif;
+    }
+
+    body nav div ul li {
+        margin-right: 10px;
+    }
+
+    body nav div ul .inviteTheBot {
+        margin-left: 670px;
+        border: 2px solid black;
+        border-radius: 18px;
+        background-color: #44AA99;
+        color: white;
+    }
+
+    .inviteTheBot a {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .btn {
+        padding: 10px 10px;
+        margin-left: 10px;
+        background-color: #336655;
+        color: white;
+        font-size: 15px;
+        transition-duration: 0.5s;
+        border: 2px solid black;
+        border-radius: 8px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /*--------------------------------*/
+    /*Footer*/
+    /*--------------------------------*/
+    .site-footer {
+        background-color: #26272b;
+        padding: 45px 0 20px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #737373;
+    }
+
+    .site-footer hr {
+        border-top-color: #bbb;
+        opacity: 0.5
+    }
+
+    .site-footer hr.small {
+        margin: 20px 0
+    }
+
+    .site-footer h6 {
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 5px;
+        letter-spacing: 2px
+    }
+
+    .site-footer a {
+        color: #737373;
+    }
+
+    .site-footer a:hover {
+        color: #3366cc;
+        text-decoration: none;
+    }
+
+    .footer-links {
+        padding-left: 0;
+        list-style: none
+    }
+
+    .footer-links li {
+        display: block
+    }
+
+    .footer-links a {
+        color: #737373
+    }
+
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+        color: #3366cc;
+        text-decoration: none;
+    }
+
+    .footer-links.inline li {
+        display: inline-block
+    }
+
+    .site-footer .social-icons {
+        text-align: right
+    }
+
+    .site-footer .social-icons a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 6px;
+        margin-right: 0;
+        border-radius: 100%;
+        background-color: #33353d
+    }
+
+    .copyright-text {
+        margin: 0
+    }
+
+    @media (max-width:991px) {
+        .site-footer [class^=col-] {
+            margin-bottom: 30px
+        }
+    }
+
+    @media (max-width:767px) {
+        .site-footer {
+            padding-bottom: 0
+        }
+
+        .site-footer .copyright-text,
+        .site-footer .social-icons {
+            text-align: center
+        }
+    }
+
+    .social-icons {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none
+    }
+
+    .social-icons li {
+        display: inline-block;
+        margin-bottom: 4px
+    }
+
+    .social-icons li.title {
+        margin-right: 15px;
+        text-transform: uppercase;
+        color: #96a2b2;
+        font-weight: 700;
+        font-size: 13px
+    }
+
+    .social-icons a {
+        background-color: #eceeef;
+        color: #818a91;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 44px;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        margin-right: 8px;
+        border-radius: 100%;
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear
+    }
+
+    .social-icons a:active,
+    .social-icons a:focus,
+    .social-icons a:hover {
+        color: #fff;
+        background-color: #29aafe
+    }
+
+    .social-icons.size-sm a {
+        line-height: 34px;
+        height: 34px;
+        width: 34px;
+        font-size: 14px
+    }
+
+    .social-icons a.facebook:hover {
+        background-color: #3b5998
+    }
+
+    .social-icons a.twitter:hover {
+        background-color: #00aced
+    }
+
+    .social-icons a.linkedin:hover {
+        background-color: #007bb6
+    }
+
+    .social-icons a.dribbble:hover {
+        background-color: #ea4c89
+    }
+
+    @media (max-width:767px) {
+        .social-icons li.title {
+            display: block;
+            margin-right: 0;
+            font-weight: 600
+        }
+    }
+
+    /*--------------------------------*/
+    /*Main Title Page*/
+    /*--------------------------------*/
+    .info {
+        display: flex;
+        text-align: center;
+        background-color: #44AA99;
+    }
+
+    .column {
+        flex: 50%;
+        padding: 5px;
+        margin-bottom: 50px;
+    }
+
+    .emoji img {
+        height: 250px;
+        margin-top: 50px;
+    }
+
+    .text {
+        margin-top: 50px;
+    }
+
+    .text .title {
+        font-size: 30px;
+        font-family: 'Commando', sans-serif;
+    }
+
+    .text p {
+        font-family: 'Comfortaa', sans-serif;
+    }
+    /*--------------------------------*/
+    /*Commands Section*/
+    /*--------------------------------*/
+    .main-content {
+        background-color: white;
+        margin-top: 30px;
+        word-wrap: break-word;
+    }
+
+    .main-content p {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 30px;
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+
+    .main-content table {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        border: 2px solid #336655;
+        border-radius: 18px;
+        margin-left: 60px;
+        margin-right: 10px;
+    }
+
+    .info1 {
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+    .page-description{
+        margin-right: 10px;
+    }
+</style>
+
+</html>
